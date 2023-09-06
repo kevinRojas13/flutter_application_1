@@ -1,21 +1,50 @@
 import 'package:flutter/material.dart';
 
-void main(List<String> args) {
-  runApp(
-    const MaterialApp(
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xffFBF0B2),
-        body: SafeArea(
-          child: Text(
-            'HolAAAa',
+        appBar: AppBar(
+          title: Text(
+            'Noticias Punto Cero',
             style: TextStyle(
-              color: Colors.black, // Cambiado a un color válido, por ejemplo, negro.
-              fontSize: 30.0,
-              fontWeight: FontWeight.w300,
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          centerTitle: true,
+          leading: IconButton(
+            icon: Icon(Icons.menu), // Ícono de menú en la parte izquierda
+            onPressed: () {
+              // Lógica cuando se presiona el ícono de menú
+            },
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.notifications), // Aquí se establece el ícono
+
+              onPressed: () {
+                // Lógica cuando se presiona el ícono
+              },
+            ),
+          ],
+        ),
+        // Agrega un fondo de color al cuerpo de la aplicación
+        body: Container(
+          color: Colors.blue, // Cambia el color de fondo aquí
+          child: Center(
+            child: Text(
+              'Muere!',
+              style: TextStyle(fontSize: 24, color: Colors.white),
             ),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
