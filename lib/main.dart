@@ -7,7 +7,7 @@ void main(List<String> args) {
         backgroundColor: Color(0xffFBF0B2),
         body: SafeArea(
           child: Text(
-            'Hola',
+            'HolAAAa',
             style: TextStyle(
               color: Colors.black, // Cambiado a un color válido, por ejemplo, negro.
               fontSize: 30.0,
